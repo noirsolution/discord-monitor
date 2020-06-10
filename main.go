@@ -59,13 +59,13 @@ func main() {
 	scanner = bufio.NewScanner(shopifySites)
 
 	euMonitor := monitor.NewMonitor("webhook_url", []string{
-		"sp0356e5cc:Tunelaurapas123!@fr.smartproxy.com:40000",
+		"login:pass@fr.smartproxy.com:40000",
 	})
 	supremeUSA := monitor.NewMonitor("webhook_url", []string{
-		"sp0356e5cc:Tunelaurapas123!@us.smartproxy.com:10000",
+		"login:pass@us.smartproxy.com:10000",
 	})
 	supremeJP := monitor.NewMonitor("webhook_url", []string{
-		"sp0356e5cc:Tunelaurapas123!@jp.smartproxy.com:30000",
+		"login:pass@jp.smartproxy.com:30000",
 	})
 	setDb()
 
@@ -89,7 +89,7 @@ func main() {
 
 func setDb() {
 	var err error
-	db, err = sql.Open("postgres", "host=localhost user=init password=password dbname=monitor sslmode=disable")
+	db, err = sql.Open("postgres", "host=localhost user=youss password=password dbname=monitor sslmode=disable")
 	if err != nil {
 		log.Fatal(err)
 	}
